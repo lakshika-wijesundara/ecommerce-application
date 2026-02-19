@@ -1,2 +1,2 @@
-package com.prac.ecom_project.service;public class UserService {
+package com.prac.ecom_project.service;public interface UserService {
 }
