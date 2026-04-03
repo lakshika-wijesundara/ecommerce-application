@@ -1,2 +1,4 @@
-package com.prac.ecom_project.service;public interface OrderService {
+package com.prac.ecom_project.service;
+
+public interface OrderService {
 }

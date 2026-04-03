@@ -1,36 +1,64 @@
 package com.prac.ecom_project.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.math.BigDecimal;
-import java.util.Date;
+import jakarta.persistence.*;
 
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-
+@Table(name = "products")
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
+
+    private Double price;
+
+    private Integer stock;
+
     private String description;
 
+    // ===== GETTERS =====
 
-    private BigDecimal price;
+    public Long getId() {
+        return id;
+    }
 
-    private Date releaseDate;
+    public String getName() {
+        return name;
+    }
 
-    private int stock;
+    public Double getPrice() {
+        return price;
+    }
 
+    public Integer getStock() {
+        return stock;
+    }
 
+    public String getDescription() {
+        return description;
+    }
 
+    // ===== SETTERS =====
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

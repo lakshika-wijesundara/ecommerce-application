@@ -22,6 +22,7 @@ public class ProductServiceImpl implements ProductService {
     private final ProductRepo productRepository;
 
     public ProductServiceImpl(ProductRepo productRepository) {
+
         this.productRepository = productRepository;
     }
 
@@ -36,6 +37,7 @@ public class ProductServiceImpl implements ProductService {
                     "Product already exists with name: " + product.getName()
             );
         }
+
 
         Product savedProduct = productRepository.save(product);
         log.info("Product created successfully with id: {}", savedProduct.getId());
@@ -67,7 +69,7 @@ public class ProductServiceImpl implements ProductService {
                 .orElseThrow(() -> {
                     log.error("Product not found with id: {}", id);
                     return new ResourceNotFoundException(
-                            "Product not found with id: " + id
+                            "Product not found with id: "+  id
                     );
                 });
     }

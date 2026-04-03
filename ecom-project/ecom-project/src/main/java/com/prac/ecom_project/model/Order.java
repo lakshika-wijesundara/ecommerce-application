@@ -14,7 +14,7 @@ public class Order {
     @ManyToOne
     private User user;
 
-    private Double ttslAmount;
+    private Double totalAmount;
 
     private String status;
 

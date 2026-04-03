@@ -1,2 +1,4 @@
-package com.prac.ecom_project.controller;public class UserController {
+package com.prac.ecom_project.controller;
+
+public class UserController {
 }
