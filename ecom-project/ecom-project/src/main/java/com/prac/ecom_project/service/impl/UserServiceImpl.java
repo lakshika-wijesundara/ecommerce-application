@@ -82,7 +82,7 @@ public class UserServiceImpl implements UserService {
         }
 
         existingUser.setEmail(updatedUser.getEmail());
-        existingUser.setusername(updatedUser.getUsername());
+        existingUser.setUsername(updatedUser.getUsername());
         existingUser.setFirstname(updatedUser.getFirstname());
         existingUser.setLastname(updatedUser.getLastname());
 

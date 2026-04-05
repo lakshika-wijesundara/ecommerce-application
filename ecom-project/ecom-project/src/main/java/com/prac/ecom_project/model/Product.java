@@ -17,6 +17,16 @@ public class Product {
     private Integer stock;
 
     private String description;
+    // Default constructor (required by JPA)
+    public Product() {}
+
+    // Convenience constructor (skip ID as it's auto-generated)
+    public Product(String name, Double price, Integer stock, String description) {
+        this.name = name;
+        this.price = price;
+        this.stock = stock;
+        this.description = description;
+    }
 
     // ===== GETTERS =====
 
