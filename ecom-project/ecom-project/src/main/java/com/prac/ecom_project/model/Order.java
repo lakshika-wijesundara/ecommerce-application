@@ -12,6 +12,7 @@ public class Order {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name="userId")
     private User user;
 
     private Double totalAmount;
@@ -28,7 +29,8 @@ public class Order {
         this.status=status;
 
     }
-    public User getUser(){
+    public Long getId(){return id;}
+    public User getUserId(){
         return user;
     }
     public double getTotalAmount(){
@@ -37,11 +39,16 @@ public class Order {
     public String getStatus(){
         return status;
     }
-    public void setUser(User user){
+    public void setUserId(User userId){
         this.user=user;
     }
     public void setStatus(String status){
+
         this.status=status;
+    }
+
+    public void setTotalAmount(Double totalAmount){
+        this.totalAmount=totalAmount;
     }
 }
 

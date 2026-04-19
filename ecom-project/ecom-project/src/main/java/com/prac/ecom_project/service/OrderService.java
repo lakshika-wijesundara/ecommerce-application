@@ -6,9 +6,10 @@ import java.util.List;
 
 public interface OrderService
 {
-    Order createOder(Order order);
+    Order createOrder(Order order);
 
     List<Order> getAllOrders();
+    Order getOrder(Long Id);
 
     Order updateOrder(Long id,Order order);
 
